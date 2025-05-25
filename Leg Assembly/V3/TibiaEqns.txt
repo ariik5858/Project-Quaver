@@ -1,0 +1,4 @@
+﻿"TibiaLength"= 55mm
+"TibiaRadius"= 10mm
+"TibiaThickness"= 20mm
+"FibulaLength" 120mm
