@@ -8,14 +8,26 @@ I wanted to make a robot dog for a very long time, so I am starting now.
 Right now I am just modelling the leg.
 
 ## To Do
-- parametrics
-- Finishing modelling the hip socket (maybe not actually)
-- Inverse kinematics
-- Electronics
-  - Servo Driver (stm32)
-  - Communication (SPI?)
-- Model the rest of the body
-- Integrate Body with legs (physical and code)
+Start the weekend of 21
+- Create body plate
+  - Hip assembly - Jacko
+  - plate - Kohei
+- Mirror legs - Kohei
+- Finish V1 body assembly - Together
+
+long weekend 28
+- Parametrics - KOhei
+- Simulations - Jacko
+- Analyze if dimension are good - Together
+- order stuff
+- assemble
+
+Future - but need to discuss the board and how are we are going to do this
+- Code and electronics
+- servo driver
+- stm32 (options)
+
+
 
 ## part links
 - [servo motor 20kg](https://www.amazon.ca/DS3218-Torque-Digital-Waterproof-Rotation/dp/B07FMBBPD2?crid=1X7VADXUXMCO1&dib=eyJ2IjoiMSJ9.0F0A37TmQATzyvHE6TmhDalWyycAf18TQzW0slYuWAaetD_Q5PlBA2u5J7D9_bJuguDKjIvLvOTEUeSHUWAFVtzSPoLb5mrEvhZrb6GEX9uPhjvQy-ESHA-tY3C2c99Eidb7mGuM2zQCo29jha2e0f6THL557UBKZLW9KTrcNJ0uKGZtBtk6y_7UwfGV8qi0SUQSDDIMXiXlg66iVCEH708nnKyiRfon7CSQPmAuR3b2V_78JvFaZC8t0QUFbfkI75kGWa4YxN6whBCRjpaOVmKZNcFGvw9K-N-fD1XOK3c.d8PvzPOScML0shvFQuTZ1STAg1C4uMzFmh4W_y7zC6U&dib_tag=se&keywords=DS3218&qid=1748287900&s=toys&sprefix=ds3218%2Ctoys%2C121&sr=1-17)
