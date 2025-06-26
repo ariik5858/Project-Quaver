@@ -36,6 +36,7 @@ Future - but need to discuss the board and how are we are going to do this
 - [tie rod](https://www.amazon.com/dp/B09JLKLK73?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 - [inserts](https://www.amazon.com/dp/B07LBQRYR3?ref=ppx_yo2ov_dt_b_product_details&th=1)
 - [25T horns](https://www.amazon.com/Seamuing-Aluminum-Futaba-Mechanical-Helicopter/dp/B07D56FVK5?crid=32OZ7RYJ1V9W4&keywords=disc+servo&qid=1654294668&sprefix=disc+servo+%2Caps%2C116&sr=8-6)
+- [servo driver](https://www.amazon.ca/FainWan-PCA9685-Channel-Compatible-Ar-duino/dp/B09L6Z1RRB?crid=3MPUCNUE0NJK6&dib=eyJ2IjoiMSJ9.YWmJxzUcTLIba42mFAmTzIRgos9XSId_033Jz4qA0dtvytAPOeQ9JS1UmUc9h_G7WBQvQMpJ7-kB8-AJ_2JUrnWwAa2gjczD2NO4a2nskGVYYN4iLOVeSD8n2GNmEyI6KQboMFnYvv7pqv1vo7n10y3yISaL58sIR-ZtgoyhflXkuFJjJ3PoZU_OsZGrm1XxXocPEpG9uwmR_gTKWKmwpg.3fqDh1LlzW62DLiiXcuWckwc9HTDBO6QB7QFKWhTpNU&dib_tag=se&keywords=servo+driver&qid=1748224541&sprefix=servo+driver%2Caps%2C147&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9waG9uZV9zZWFyY2hfYXRm&psc=1)
 
 ---
 Prob won't need the following:
