@@ -9,8 +9,6 @@ I wanted to make a robot dog for a very long time, so I am starting now.
 This project has been divided into two parts:
 ### 🔧 Mechanical  
 - CAD models of individual parts and assemblies  
-- Bill of materials (list of external components purchased)  
-- Notes on fabrication and assembly  
 
 ### 💻 Software  
 - Low-level driver code for actuators and sensors  
