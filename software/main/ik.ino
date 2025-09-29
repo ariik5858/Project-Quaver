@@ -64,6 +64,6 @@ void ik(float x, float y, float z, bool side, float* theta1, float* theta2, floa
 
 	// the following could change depending on how the motors rotate
   *theta2 = phi1 + alpha12 + alpha13;
-	*theta3 = phi1 + phi2 + Pi;
+  *theta3 = phi1 + phi2 + Pi;
 
 }
