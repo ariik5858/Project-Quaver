@@ -41,7 +41,8 @@ void ik(float x, float y, float z, bool side, float* theta1, float* theta2, floa
   
   float alpha3_prime = asin((sin(alpha3)/b1)*Rxz_prime);
   float phi1 = atan(d2z/d2x);
-  float alpha4 = phi1 + (Pi - phi1);
+  float alpha4 = phi1 + (PI - phi1);
+  float d2 = sqrt(d2x*d2x + d2z*d2z);
   float b2 = sqrt(d2*d2 + b1*b1 - 2*d2*b1);
   float alpha5 = asin((sin(alpha4)/b2)*b1);
 
@@ -49,14 +50,14 @@ void ik(float x, float y, float z, bool side, float* theta1, float* theta2, floa
   float alpha7 = asin((sin(alpha6)/b2)*L3);
   float phi2 = alpha7 + alpha5;
 
-  float alpha8 = Pi-alpha6;
+  float alpha8 = PI-alpha6;
   float b3 = sqrt(L4*L4 + L5*L5 - 2*L4*L5*cos(alpha8));
   float alpha9 = asin((sin(alpha8)/b3)*L4);
 
-  float alpha10 = acos((L8*L8 + b3*b3 - L6*L6) / (2*L8*B3));
+  float alpha10 = acos((L8*L8 + b3*b3 - L6*L6) / (2*L8*b3));
   float phi3 = alpha10 + alpha9;
 
-  float alpha11 = 2*Pi - phi2 - phi3 - gamma1;
+  float alpha11 = 2*PI - phi2 - phi3 - gamma1;
   float b4 = sqrt(L8*L8 + d2*d2 - 2*L8*d2*cos(alpha11));
   float alpha12 = asin((sin(alpha11)/b4)*L8);
 
@@ -64,6 +65,6 @@ void ik(float x, float y, float z, bool side, float* theta1, float* theta2, floa
 
 	// the following could change depending on how the motors rotate
   *theta2 = phi1 + alpha12 + alpha13;
-  *theta3 = phi1 + phi2 + Pi;
+  *theta3 = phi1 + phi2 + PI;
 
 }
