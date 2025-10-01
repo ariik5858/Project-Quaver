@@ -1,25 +1,25 @@
 // Arm lengths
-const float L1 = 10;
-const float L2 = 10;
-const float L3 = 10;
-const float L4 = 10;
-const float L5 = 10;
-const float L6 = 10;
-const float L7 = 10;
-const float L8 = 10;
-const float L9 = 10;
-const float L10 = 10;
+const float L1 = 50.7;
+// const float L2 = 10;
+const float L3 = 100.21;
+const float L4 = 50.42;
+const float L5 = 100;
+const float L6 = 134.16;
+const float L7 = 70.94;
+const float L8 = 52.5;
+const float L9 = 60;
+const float L10 = 24.5;
 
-const float d1 = 10;
-const float d2z = 10;
-const float d2x = 10;
+const float d1 = 86.79; // need to redesign before setting it
+const float d2z = 25.5;
+const float d2x = 19.3;
 
-const float gamma1 = 10;
+const float gamma1 = 85; // degree
 
 // const float PI = 3.1415926535897932384626433832795;
 const float H_PI = 1.5707963267948966192313216916398;
 
-void ik(float x, float y, float z, bool side, float* theta1, float* theta2, float* theta3) {
+void ik(float x, float y, float z, bool side, float &theta1, float &theta2, float &theta3) {
   // -- yz plane calculations -- //
   float Ryz = sqrtf(y*y + z*z);
   float alpha1 = acos(L1 / Ryz);
@@ -27,12 +27,12 @@ void ik(float x, float y, float z, bool side, float* theta1, float* theta2, floa
   float phi = alpha1 + alpha2;
   
   // for now the code will only look at the right side
-  *theta1 = phi - H_PI; // right side theta
+  theta1 = phi - H_PI; // right side theta
   // I think left side theta is phi + H_PI 
   
   // -- rotation about x-axis -- //
-  float y_prime = y * cos(*theta1) + z * sin(*theta1); // since are all in the 
-  float z_prime = -y * sin(*theta1) + z * cos(*theta1);
+  float y_prime = y * cos(theta1) + z * sin(theta1); // since are all in the 
+  float z_prime = -y * sin(theta1) + z * cos(theta1);
   
   // -- xz plane calculations -- //
   float Rxz_prime = sqrt(x*x + z_prime*z_prime);
@@ -64,7 +64,6 @@ void ik(float x, float y, float z, bool side, float* theta1, float* theta2, floa
   float alpha13 = acos((L10*L10 + b4*b4 - L9*L9) / (2*L10*b4));
 
 	// the following could change depending on how the motors rotate
-  *theta2 = phi1 + alpha12 + alpha13;
-  *theta3 = phi1 + phi2 + PI;
-
+  theta2 = phi1 + alpha12 + alpha13;
+  theta3 = phi1 + phi2 + PI;
 }
