@@ -30,8 +30,8 @@ void loop() {
   // myServo.setPWM(0,0,angleToPulse(120));
   // myServo.setPWM(1,0,angleToPulse(120));
   // delay(500);
-  // myServo.setPWM(0,0,angleToPulse(90));
-  // myServo.setPWM(1,0,angleToPulse(180));
-  // delay(1000);
+  myServo.setPWM(0,0,angleToPulse(90));
+  myServo.setPWM(1,0,angleToPulse(180));
+  delay(1000);
 
 }

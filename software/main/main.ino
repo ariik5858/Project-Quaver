@@ -16,7 +16,7 @@ float theta2;
 float theta3;
 
 void setup() {
-  // put your setup code here, to run once:
+  
   Serial.begin(9600);
   Serial.println("Testing PCA9685 with one servo");
   myServo.begin();
@@ -29,7 +29,23 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  ik(0, 0, 0, false, theta1, theta2, theta3);
+  myServo.setPWM(0,0,angleToPulse(135));
+  myServo.setPWM(1,0,angleToPulse(90));
+  delay(1000);
 
+  ik(0, 0, -100, false, theta1, theta2, theta3);
+
+  Serial.println(theta2);
+  Serial.println(theta3);
+
+  // myServo.setPWM(0,0,angleToPulse(theta2));
+  // myServo.setPWM(1,0,angleToPulse(theta3));
+  // delay(1000);
+
+
+  myServo.setPWM(0,0,angleToPulse(90));
+  myServo.setPWM(1,0,angleToPulse(180));
+  delay(1000);
+
+  
 }

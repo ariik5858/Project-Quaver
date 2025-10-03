@@ -37,7 +37,7 @@ void ik(float x, float y, float z, bool side, float &theta1, float &theta2, floa
   // -- xz plane calculations -- //
   float b1 = sqrt(x*x + z_prime*z_prime);
   
-  float alpha3_prime = asin((sin(alpha3)/b1)*Rxz_prime);
+  float alpha3_prime = atan(abs(z_prime)/abs(x));
   float phi1 = atan(d2z/d2x);
   float alpha4 = phi1 + (PI - phi1);
   float d2 = sqrt(d2x*d2x + d2z*d2z);
