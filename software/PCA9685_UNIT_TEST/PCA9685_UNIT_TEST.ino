@@ -21,17 +21,17 @@ void setup() {
 }
 
 void loop() {
-  myServo.setPWM(0,0,angleToPulse(0));
-  myServo.setPWM(1,0,angleToPulse(0));
-  delay(500);
-  myServo.setPWM(0,0,angleToPulse(60));
-  myServo.setPWM(1,0,angleToPulse(60));
-  delay(500);
-  myServo.setPWM(0,0,angleToPulse(120));
-  myServo.setPWM(1,0,angleToPulse(120));
-  delay(500);
-  myServo.setPWM(0,0,angleToPulse(180));
-  myServo.setPWM(1,0,angleToPulse(180));
-  delay(500);
+  myServo.setPWM(0,0,angleToPulse(135));
+  myServo.setPWM(1,0,angleToPulse(90));
+   delay(1000);
+  // myServo.setPWM(0,0,angleToPulse(135));
+  // myServo.setPWM(1,0,angleToPulse(135));
+  // delay(500);
+  // myServo.setPWM(0,0,angleToPulse(120));
+  // myServo.setPWM(1,0,angleToPulse(120));
+  // delay(500);
+  // myServo.setPWM(0,0,angleToPulse(90));
+  // myServo.setPWM(1,0,angleToPulse(180));
+  // delay(1000);
 
 }
