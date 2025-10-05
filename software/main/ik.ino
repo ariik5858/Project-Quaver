@@ -1,6 +1,6 @@
 // Arm lengths
 const float L1 = 50.7;
-// const float L2 = 10;
+const float L2 = 10;
 const float L3 = 100.21;
 const float L4 = 50.42;
 const float L5 = 100;
