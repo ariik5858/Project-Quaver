@@ -34,7 +34,7 @@ void ik(float x, float y, float z, bool side, float &theta1, float &theta2, floa
   Serial.print(F("phi = ")); Serial.println(phi * RAD_TO_DEG);
   
   // for now the code will only look at the right side
-  theta1 = phi - H_PI; // right side theta
+  theta1 = phi; // right side theta
   Serial.print(F("theta1 = ")); Serial.println(theta1 * RAD_TO_DEG);
   
   // -- rotation about x-axis -- //
