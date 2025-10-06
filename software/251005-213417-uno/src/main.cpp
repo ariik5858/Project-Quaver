@@ -1,9 +1,10 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
+#include "utils.h"
+#include "leg.h"
+#include "Arduino.h"
 
-// class LegController;
-LegController control;    
-extern Adafruit_PWMServoDriver myServo;
+LegController control;
 
 void setup() {
   Serial.begin(9600);
@@ -18,7 +19,7 @@ void setup() {
   ik(0, 0, -100, false, theta1, theta2, theta3);
 
   Serial.println("Start up test");
-  control.startup();
+  control.startUp();
 }
 
 void loop() {

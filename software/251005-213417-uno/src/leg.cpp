@@ -1,39 +1,15 @@
 #include <Adafruit_PWMServoDriver.h>
+#include "Arduino.h"
+#include "utils.h"
+#include "leg.h"
 
-#define SERVOMIN 150  // Pulse length for 0° (adjust if needed)
-#define SERVOMAX 600  // Pulse length for 180° (adjust if needed)
-
-Adafruit_PWMServoDriver myServo = Adafruit_PWMServoDriver(0x40);
+Adafruit_PWMServoDriver myServo(0x40);
 
 static uint16_t angleToPulse(int angleDeg) {
   angleDeg = constrain(angleDeg, 0, 180);
   return map(angleDeg, 0, 180, SERVOMIN, SERVOMAX);
 }
 
-struct Leg {
-  bool side;       // true = right, false = left
-  float theta1;
-  float theta2;
-  float theta3;
-
-  uint8_t pin1;
-  uint8_t pin2;
-  uint8_t pin3;
-
-  Leg(bool s, uint8_t p1, uint8_t p2, uint8_t p3)
-    : side(s), theta1(0), theta2(0), theta3(0),
-      pin1(p1), pin2(p2), pin3(p3) {}
-};
-
-class LegController {
-public:
-  LegController();
-  void startUp();
-  void setLegPos(int legNum, float x, float y, float z);
-  Leg& getLeg(int legNum);
-private:
-  Leg legs[4];
-};
 
 LegController::LegController()
   : legs{
@@ -68,7 +44,5 @@ void LegController::startUp() {
     myServo.setPWM(leg.pin2, 0, angleToPulse(90));
     myServo.setPWM(leg.pin3, 0, angleToPulse(180));
   }
+  delay(10);
 }
-
-// Define the global instance here (after class is fully defined)
-LegController control;

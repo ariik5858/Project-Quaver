@@ -22,7 +22,6 @@ This project has been divided into two parts:
 - [ ] Software
   - [ ] Driver code
     - [ ] IK
-    - [ ] Simulations
     - [ ] Determine if code will be on Arduino or STM32
   - [ ] Implement Basic Locomotion code
   - [ ] Autonomy
