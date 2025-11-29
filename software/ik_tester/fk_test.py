@@ -41,8 +41,8 @@ def fk_joint_frames(theta1, theta2, theta3):
 def main():
     # initial goal
     x0, y0, z0 = -174.71, 50.7, 0
-    mode1 = True   # theta1 branch
-    mode2 = True   # elbow branch
+    mode1 = False   # theta1 branch
+    mode2 = False   # elbow branch
 
     ik = IKCalc(x0, y0, z0)
     t1, t2, t3 = ik.solve(mode1, mode2)
