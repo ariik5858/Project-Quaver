@@ -71,8 +71,8 @@ void LegController::ikTrue(Leg *leg, int side, float x, float y, float z) {
     float phi3 = sinTheta(L8, r2, tR4);
     float phi4 = cosTheta(L10, r2, L9);
 
-    float t1 = (leg->theta1 + H_PI);
-    float t2 = (leg->theta2 - H_PI);
+    float t1 = (leg->theta1 + HALF_PI);
+    float t2 = (leg->theta2 - HALF_PI);
     float t3 = (2*PI - abs(phi1 + phi3 + phi4));
 
     t1 = wrap(t1);
@@ -82,16 +82,6 @@ void LegController::ikTrue(Leg *leg, int side, float x, float y, float z) {
     leg->theta1 = t1 * RAD_TO_DEG;
     leg->theta2 = t2 * RAD_TO_DEG;
     leg->theta3 = t3 * RAD_TO_DEG;
-    
-    /*
-    Serial.print("theta1: ");
-    Serial.print(leg->theta1, 6);  // 6 = decimal places
-    Serial.print(" - theta2: ");
-    Serial.print(leg->theta2, 6);
-    Serial.print(" - theta3: ");
-    Serial.println(leg->theta3, 6);
-    */
-
   } else {}
 }
 

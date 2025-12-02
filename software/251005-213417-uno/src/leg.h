@@ -1,8 +1,14 @@
+/*
+  leg.h - Definitions for robot leg control using PCA9685 servo driver.
+  Provides Leg and LegController classes for storing joint states,
+  performing inverse kinematics, and commanding servo positions.
+*/
 #pragma once
 #include <Adafruit_PWMServoDriver.h>
 
-#define SERVOMIN 150  // Pulse length for 0° (adjust if needed)
-#define SERVOMAX 600  // Pulse length for 180° (adjust if needed)
+constexpr int SERVOMIN = 150l; // Pulse length for 0° (adjust if needed)
+constexpr int SERVOMAX = 600l;  // Pulse length for 180° (adjust if needed)
+
 
 extern Adafruit_PWMServoDriver myServo;
 
