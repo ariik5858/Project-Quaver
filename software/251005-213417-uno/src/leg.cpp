@@ -23,11 +23,12 @@ LegController::LegController()
 void LegController::ik(Leg &leg, int side, float x, float y, float z) {
   float phi = atan2(y, x);
   float root = sqrt(x*x + y*y - L1*L1);
+  float l;
 
-  if(!side) L1 = -L1;
+  if(!side) l = -L1;
 
   // Theta 1
-    float t1 = phi - atan2(L1, -root);
+    float t1 = phi - atan2(l, -root);
     if (t1 < 0) {
       if (abs(t1) > PI){
         t1 += 2*PI;
