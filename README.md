@@ -1,6 +1,6 @@
-# Robot Dog
-Name Pending
-<img width="912" height="694" alt="image" src="https://github.com/user-attachments/assets/0c26094b-ad28-411b-b81b-450dd36ffb4f" />
+# Project Quaver
+<img width="1006" height="808" alt="image" src="https://github.com/user-attachments/assets/5fd44301-36a4-4a1a-ac0c-812fecad5cd3" />
+
 
 
 
