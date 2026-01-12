@@ -169,22 +169,32 @@ Leg LegController::getLeg(int legNum) {
 }
 
 void LegController::startUp() {
+  float target = 0;
+  for (int i = 0; i < 4; i++) {
+    target = -75.0f / (4 - i);
+     for (int i = 0; i < 4; i++) {
+      setLegPos(i, target, 50.7f, 0.0f);
+    }
+  }
+ 
+  for (int i = 0; i < 4; i++) {
+    setLegPos(i, -75.0f, 50.7f, 0.0f);
+  }
   setLegPos(0, -75.0f, 50.7f, 0.0f);
   setLegPos(1, -75.0f, 50.7f, 0.0f);
   setLegPos(2, -75.0f, -50.7f, 0.0f);
   setLegPos(3, -75.0f, -50.7f, 0.0f);
-  
 }
 
 void LegController::callibrate() {
-  Serial.println("angles");
-  for (int i = 0; i < 4; i++) {
-    Leg &leg = legs[i];
-    myServo.setPWM(leg.pin1, 0, angleToPulse(0));
-    myServo.setPWM(leg.pin2, 0, angleToPulse(0));
-    myServo.setPWM(leg.pin3, 0, angleToPulse(0));
-  }
-  delay(5000);
+  // Serial.println("angles");
+  // for (int i = 0; i < 4; i++) {
+  //   Leg &leg = legs[i];
+  //   myServo.setPWM(leg.pin1, 0, angleToPulse(0));
+  //   myServo.setPWM(leg.pin2, 0, angleToPulse(0));
+  //   myServo.setPWM(leg.pin3, 0, angleToPulse(0));
+  // }
+  // delay(5000);
   Serial.println("min angles");
   for (int i = 0; i < 4; i++) {
     Leg &leg = legs[i];

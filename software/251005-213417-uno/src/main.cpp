@@ -7,7 +7,7 @@
 
 LegController control;
 int angleDeg = 90;
-bool callibrate = false;
+bool callibrate = true;
 void setup() {
   Wire.begin();
   Serial.begin(9600);
